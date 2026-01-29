@@ -54,6 +54,7 @@ Create a `env` directory in the root of the project and add `.env.test` file in 
 ```bash
 TEST_ENV = "test"
 BASE_URL = "https://www.demoblaze.com/index.html"
+API_BASE_URL = "https://api.demoblaze.com/"
 USERNAME = "<username>"
 PASSWORD = "<password>"
 ENABLE_LOGGING = false
