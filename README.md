@@ -91,7 +91,7 @@ After running tests, generate the Allure report as single html file. The report 
 in `reports/allure-report/`:
 
 ```bash
-allure generate reports/allure-results -o reports/allure-report --clean --single-file
+npx allure generate reports/allure-results -o reports/allure-report --clean --single-file
 ```
 
 ## Project Structure
