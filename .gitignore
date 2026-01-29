@@ -1,0 +1,10 @@
+node_modules/
+/blob-report/
+/playwright/.cache/
+/reports/
+/env/
+/.git/*
+.git/*
+!/.git/hooks/
+/.git/hooks/*
+!/.git/hooks/**

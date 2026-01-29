@@ -1,0 +1,38 @@
+{
+  "name": "@ch/testing",
+  "version": "1.0.0",
+  "description": "This repo will contain all the Companies House DemoBlaze Product Store testing related code.",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "setup": "npm install && npx playwright install",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write",
+    "build": "echo 'TESTING: no work required'",
+    "test": "echo 'TESTING: no work required'",
+    "test:reg": "cross-env test_env=test playwright test -c playwright.config.ts --project=\"Regression Tests\"",
+    "test:reg:headed": "cross-env test_env=test playwright test -c playwright.config.ts --project=\"Regression Tests\" --headed",
+    "test:reg:debug": "cross-env test_env=test playwright test -c playwright.config.ts --project=\"Regression Tests\" --ui",
+    "allure:generate": "cross-env NODE_OPTIONS=--no-deprecation allure generate reports/allure-results --clean -o reports/allure-report",
+    "allure:open": "cross-env NODE_OPTIONS=--no-deprecation allure open reports/allure-report",
+    "regression": "npm run test:reg && npm run allure:generate && npm run allure:open"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --check"
+    ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.0.10",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.5",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "reflect-metadata": "^0.2.2"
+  }
+}

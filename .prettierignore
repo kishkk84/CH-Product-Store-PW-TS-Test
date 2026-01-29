@@ -1,0 +1,6 @@
+public
+coverage
+results
+test-results
+node_modules
+*.hbs
